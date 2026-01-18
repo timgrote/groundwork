@@ -2,11 +2,13 @@ FROM node:20-slim
 
 WORKDIR /app
 
-# Install http-server globally
-RUN npm install -g http-server
+# Copy package files first for better layer caching
+COPY app/package*.json ./
 
-# Files will be mounted from host
+# Install dependencies
+RUN npm install
 
+# Files will be mounted from host in dev mode
 EXPOSE 3000
 
-CMD ["http-server", "-p", "3000"]
+CMD ["npm", "run", "dev"]

@@ -1,0 +1,17 @@
+{
+  "name": "groundwork-dxf-viewer",
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "dxf-parser": "^1.1.2",
+    "pixi.js": "^8.6.6"
+  },
+  "devDependencies": {
+    "vite": "^6.0.7"
+  }
+}
