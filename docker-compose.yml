@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "4004:3000"
+    volumes:
+      - ./app:/app
+    working_dir: /app
+
+volumes:
+  node_modules:
